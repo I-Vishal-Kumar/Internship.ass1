@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <!-- company description -->
+      <section id="company_description">
+        <div class="title decor_1">
+          <div class="decoration">
+            <div>
+              <!-- <ion-icon name="bookmark-sharp"></ion-icon> -->
+              <div class="decor">
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="description">
+          <div class="company_logo">
+            <!-- company logo and name -->
+          </div>
+          <div>
+            <!-- company description -->
+            <div class="button company_name">Company Name</div>
+            <p>
+              Welcome to Veritech, where a dedicated team of professional works
+              together to bring inovation, creativity and expertise to software
+              industry. Get to know the individuals who make our company thrive.
+            </p>
+          </div>
+          <span class="dashed_hr_line"></span>
+        </div>
+      </section>
+      <!-- employee description -->
+      <section>
+        <div>
+          <div class="title">
+            <div class="decoration">
+              <div>
+                <!-- <ion-icon name="bookmark-sharp"></ion-icon> -->
+                <div class="decor">
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="employee_container">
+          <h3 class="team_intro">Meet Our Team</h3>
+          <div class="button management_heading">
+            Leadership / Management Team
+          </div>
+
+          <div class="employees_row" id="lead_employee"></div>
+        </div>
+        <div class="employee_container">
+          <div class="title">
+            <div class="button management_heading">Development Team</div>
+
+            <div class="decoration decor_left">
+              <div>
+                <!-- <ion-icon name="bookmark-sharp"></ion-icon> -->
+                <div class="decor">
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="employees_row" id="development_team"></div>
+        </div>
+        <div class="employee_container">
+          <div class="title">
+            <div class="button management_heading">
+              Sales and Marketing Team
+            </div>
+
+            <div class="decoration">
+              <div>
+                <!-- <ion-icon name="bookmark-sharp"></ion-icon> -->
+                <div class="decor">
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="employees_row" id="sales"></div>
+        </div>
+        <div class="title">
+          <div class="decoration decor_left">
+            <div>
+              <!-- <ion-icon name="bookmark-sharp"></ion-icon> -->
+              <div class="decor">
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+      let employees = {
+        leads: [
+          {
+            name: "Founder Name",
+            designation: "Founder / CEO",
+          },
+          {
+            name: "Founder Name",
+            designation: "Founder / CEO",
+          },
+          {
+            name: "VP Name",
+            designation: "VP, Development & Growth",
+          },
+          {
+            name: "VP Name",
+            designation: "VP, Sales & Marketing",
+          },
+          {
+            name: "VP Name",
+            designation: "VP, Finance & Operation",
+          },
+        ],
+        development_team: [
+          {
+            name: "Developer Name",
+            designation: "Team Lead, SE",
+          },
+          {
+            name: "Developer Name",
+            designation: "Software Engineer",
+          },
+          {
+            name: "Developer Name",
+            designation: "Software Engineer",
+          },
+          {
+            name: "Developer Name",
+            designation: "Software Engineer",
+          },
+          {
+            name: "Developer Name",
+            designation: "Software Engineer",
+          },
+          {
+            name: "Developer Name",
+            designation: "Software Engineer",
+          },
+        ],
+        sales: [
+          {
+            name: "Employee Name",
+            designation: "Team Lead",
+          },
+          {
+            name: "Employee Name",
+            designation: "Sales Officer",
+          },
+          {
+            name: "Employee Name",
+            designation: "Sales Officer",
+          },
+          {
+            name: "Employee Name",
+            designation: "Sales Officer",
+          },
+          {
+            name: "Employee Name",
+            designation: "Marketing Officer",
+          },
+          {
+            name: "Employee Name",
+            designation: "Marketing Officer",
+          },
+          {
+            name: "Employee Name",
+            designation: "Marketing Officer",
+          },
+        ],
+      };
+
+      employees.leads.forEach((item, i) => {
+        let lead_container = document.querySelector("#lead_employee");
+        let lead_employee = document.createElement("div");
+        lead_employee.classList.add("employee");
+        lead_employee.innerHTML = `
+              <div class="avatar"></div>
+              <div class="employee_info">
+                <span>
+                  <h6>[</h6>
+                  <h6 class="employee_name">${item.name}</h6>
+                  <h6>]</h6>
+                </span>
+                <p>${item.designation}</p>
+              </div>`;
+        lead_container.appendChild(lead_employee);
+      });
+
+      employees.development_team.forEach((item, i) => {
+        let development_container = document.querySelector("#development_team");
+        let development_employee = document.createElement("div");
+        development_employee.classList.add("employee");
+        development_employee.innerHTML = `
+              <div class="avatar"></div>
+              <div class="employee_info">
+                <span>
+                  <h6>[</h6>
+                  <h6 class="employee_name">${item.name}</h6>
+                  <h6>]</h6>
+                </span>
+                <p>${item.designation}</p>
+              </div>`;
+        development_container.appendChild(development_employee);
+      });
+
+      employees.sales.forEach((item, i) => {
+        let development_container = document.querySelector("#sales");
+        let development_employee = document.createElement("div");
+        development_employee.classList.add("employee");
+        development_employee.innerHTML = `
+              <div class="avatar"></div>
+              <div class="employee_info">
+                <span>
+                  <h6>[</h6>
+                  <h6 class="employee_name">${item.name}</h6>
+                  <h6>]</h6>
+                </span>
+                <p>${item.designation}</p>
+              </div>`;
+        development_container.appendChild(development_employee);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
+}
+
+body > main {
+  height: 100vh;
+  width: 100vw;
+  height: 100dvh;
+  width: 100dvw;
+  background-color: #ffffff;
+  display: flex;
+  overflow-x: hidden;
+}
+
+body > main > section:nth-child(1) {
+  flex: 1;
+}
+
+body > main > section:nth-child(2) {
+  flex: 2;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(203, 73, 188);
+  border-radius: 2rem;
+}
+::-webkit-scrollbar-track {
+  background-color: rgb(240, 240, 240);
+  box-shadow: inset 1px 2px 3px gray;
+}
+
+/* ===================common section ======================= */
+
+.decoration {
+  width: 99vw;
+  height: 3rem;
+  position: absolute;
+  display: flex;
+  justify-content: end;
+}
+.decor_left {
+  justify-content: start;
+}
+.decor_left > div {
+  transform: rotate(180deg);
+}
+.decoration > div > ion-icon {
+  transform: rotate(90deg);
+  font-size: 60px;
+}
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  background: rgb(255, 49, 197);
+  color: white;
+  margin: 0 auto;
+  font-weight: 550;
+  width: fit-content;
+}
+.decor {
+  background-color: rgb(255, 49, 197);
+  height: 3rem;
+  width: 4rem;
+}
+.decor > span {
+  display: block;
+  border-left: 1.5rem solid #ffffff;
+  border-right: 1.5rem solid transparent;
+  border-bottom: 1.5rem solid transparent;
+  border-top: 1.5rem solid transparent;
+}
+/* ===================commonn section ends =================== */
+/* ================== comany description ================================= */
+
+#company_description {
+  width: 100vw;
+  padding-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.description {
+  padding-inline: 2rem;
+  padding-block: 1rem;
+}
+
+#company_description > div {
+  text-align: center;
+}
+
+.description > div > p {
+  margin-top: 1.5rem;
+}
+
+.dashed_hr_line {
+  height: 1rem;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  border-bottom: dashed 2px rgb(255, 44, 230);
+}
+
+/* ==================COMPANY DESCRIPTION ENDS ============================== */
+
+/* =================== employeee section ===================================== */
+.employee_container {
+  /* padding-inline: 2rem; */
+  text-align: center;
+  padding-block: 0.5rem;
+}
+.team_intro {
+  padding: 1rem 0;
+}
+.title {
+  display: flex;
+  position: relative;
+  height: 3rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.employees_row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.management_heading {
+  padding: 0.35rem 1rem;
+  /* margin-bottom: 3rem; */
+}
+.employees_row {
+  margin: 1rem 0;
+}
+.employee {
+  /* height: 4rem; */
+  width: 6rem;
+  margin: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.employee_info > span {
+  display: flex;
+  justify-content: center;
+}
+.avatar {
+  height: 5rem;
+  margin: 0.25rem 0;
+  width: 5rem;
+  margin-bottom: 1rem;
+  border-radius: 100%;
+  background: #000;
+}
+.employee_info > p {
+  margin-top: 0.25rem;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 550;
+  font-style: italic;
+  color: rgb(243, 53, 221);
+}
+
+.avatar {
+  background: url("./avatar.jpg") center no-repeat;
+  background-size: contain;
+}
+
+/* =====================EMPLOYEE SECTION ENDS ===================================== */
+
+@media only screen and (max-width: 700px) {
+  body > main {
+    display: block;
+    overflow: scroll;
+  }
+  section {
+    max-height: fit-content;
+  }
+  .company_logo {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  section {
+    height: 100vh;
+  }
+  .description {
+    margin-top: 2rem;
+  }
+  .company_logo {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 100%;
+    background: url("./LOGO.jpg") center no-repeat;
+    background-size: cover;
+    margin: 2rem auto;
+    margin-bottom: 0.5rem;
+  }
+  .decor_1 {
+    display: none;
+  }
+}
